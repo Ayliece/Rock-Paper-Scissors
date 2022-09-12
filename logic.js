@@ -63,5 +63,3 @@ possibleChoice.forEach((possible) => {
     })
 });
 
-console.log('hi')
-console.log('this is the new branch')
