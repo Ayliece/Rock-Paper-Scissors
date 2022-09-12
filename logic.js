@@ -41,6 +41,7 @@ const getResult = () => {
         resultDisplay.innerHTML = 'you win!'
         userScoreDisplay.innerHTML = userScore += 1;
     }
+
 }
 const getComputerChoice = () => {
     const random = Math.floor(Math.random() * 3);
@@ -60,6 +61,20 @@ possibleChoice.forEach((possible) => {
         playerChoice.innerHTML = userchoice
         getComputerChoice();
         getResult();
+        if (userScore === 5) {
+            resultDisplay.innerHTML = 'user wins the match';
+            userScore = 0
+            userScoreDisplay.innerHTML = 0
+            computerScore = 0
+            computerScoreDisplay.innerHTML = 0
+        }
+        else if (computerScore === 5) {
+            resultDisplay.innerHTML = 'computer wins the match';
+            userScore = 0
+            userScoreDisplay.innerHTML = 0
+            computerScore = 0
+            computerScoreDisplay.innerHTML = 0
+        }
     })
 });
 
